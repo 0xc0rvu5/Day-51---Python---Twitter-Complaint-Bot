@@ -13,6 +13,9 @@ PATH = '~/.local/bin/chromedriver'
 OPTIONS = Options()
 OPTIONS.add_experimental_option("detach", True)
 DRIVER = webdriver.Chrome(PATH, options=OPTIONS)
+#open on separate screen and maximize window
+DRIVER.set_window_position(207, 1218)
+DRIVER.maximize_window()
 TWITTER_EMAIL = os.getenv('TWITTER_EMAIL')
 TWITTER_UNAME = os.getenv('TWITTER_UNAME')
 TWITTER_PW = os.getenv('TWITTER_PW')
